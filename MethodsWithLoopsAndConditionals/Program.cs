@@ -17,6 +17,8 @@ namespace MethodsWithLoopsAndConditionals
             CanYouVote();
             CheckRange();
             MultiplicationTable();
+            CheckRange2();
+            MultiplicationTable2();
         }
 
         public static void DecreasingNumbers() //1000 to -1000
@@ -62,7 +64,7 @@ namespace MethodsWithLoopsAndConditionals
         {
             Console.WriteLine("How old are you?");
             int age = int.Parse(Console.ReadLine());
-            if (age >= 21)
+            if (age >= 18)
             {
                 Console.WriteLine("Congrats! You can vote!");
             }
@@ -95,6 +97,46 @@ namespace MethodsWithLoopsAndConditionals
             {
                 Console.WriteLine($"{enteredValue} * {i} = {enteredValue * i}");
             }
+        }
+
+        public static void CheckRange2()
+        {
+            bool userResponse;
+            int result;
+
+            do
+            {
+                Console.WriteLine("Enter an integer value.");
+                userResponse = int.TryParse(Console.ReadLine(), out result);
+            } while (!userResponse);
+
+            if (result >= -10 && result <=10)
+            {
+                Console.WriteLine($"{result} is between -10 and 10.");
+            }
+            else
+            {
+                Console.WriteLine($"{result} is not between -10 and 10.");
+            }
+        }
+
+        public static void MultiplicationTable2()
+        {
+            bool userResponse;
+            int result;
+
+            do
+            {
+                Console.WriteLine("Enter an integer value.");
+                userResponse = int.TryParse(Console.ReadLine(), out result);
+
+            } while (!userResponse);
+
+            for (int x = 1; x <= 12; x++)
+            {
+                Console.WriteLine($"{result} * {x} = {result * x}");
+            }
+
         }
     }
 }
