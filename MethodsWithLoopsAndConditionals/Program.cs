@@ -7,7 +7,7 @@ namespace MethodsWithLoopsAndConditionals
         static void Main(string[] args)
         {
             DecreasingNumbers();
-            DecreaseByThree();
+            IncreaseByThree();
             Console.WriteLine(EqualityTest(3, 3));
             Console.WriteLine(EqualityTest(3, 5));
             Console.WriteLine(EvenOrOdd(3));
@@ -27,7 +27,7 @@ namespace MethodsWithLoopsAndConditionals
             }
         }
 
-        public static void DecreaseByThree() //starting at 3 to 999
+        public static void IncreaseByThree() //starting at 3 to 999
         {
             for (int i = 3; i <= 999; i += 3)
             {
